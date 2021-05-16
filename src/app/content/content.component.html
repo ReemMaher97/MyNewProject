@@ -1,0 +1,128 @@
+<div class="content"   >
+
+  <div class="slideshow-container" id="show" onload="test2()">
+
+    <div class="mySlides">
+
+      <div class="numbertext">1 / 3</div>
+      <img src="../assets/images/img3.jpg" style="width:100% ;max-height: 400px;">
+      <div class="text">Welcome to Siniora Jordan
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+    </div>
+
+    <div class="mySlides " >
+      <div class="numbertext">2 / 3</div>
+      <img src="../assets/images/img22.jpg" style="width:100% ;max-height: 400px;">
+      <div class="text">Siniora Jordan
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 3</div>
+      <img src="../assets/images/img.jpg" style="width:100% ;max-height: 400px;">
+      <div class="text">1920-2020
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <hr>
+    <div style="margin: 50px;">
+<h2 class="h2_style">Browse Products by Category</h2>
+<div  class="mainDiv">
+<div style="display:inline-block">
+ <img src="../assets/images/img7.jpg" style="width:240px;height: 300px;" >
+ <div class="myDiv" >
+   Cold Cuts
+   <div>
+ <button class="btn_in_div">View Products</button>
+</div>
+</div>
+
+</div>
+<div style="display:inline-block">
+  <img src="../assets/images/img8.jpg" style="width:240px;height: 300px;margin-left: 250px;" >
+  <div class="myDiv2">Frozen
+    <div>
+      <button class="btn_in_div" routerLink="products"  >View Products</button>
+
+     </div>
+  </div>
+</div>
+</div>
+</div>
+<hr>
+<div style="background:rgb(216, 214, 214);padding: 20px;padding-bottom: 100px;">
+<div>
+<h2 class="h2_style">Best Seller Products</h2>
+</div>
+
+<div class="products">
+<img src="https://cozmo.jo/pub/media/catalog/product/cache/498ed9154ca719046198f24acd330695/6/2/6253005385656_1.jpg"style="width: 150px;height:150px ;">
+<p style="color: black; text-align: center;">Chicken finger snour 750 g	</p>
+<div class="center">
+<div></div>
+<p>
+  </p><div class="input-group" style="width: 150px;" >
+      <span class="input-group-btn" >
+          <button style="margin-left: 25px;" type="button" class="btn btn-danger btn-number "  data-type="minus" data-field="quant[2]" onclick="subNumber(document.getElementById('quntity'))">
+            <span class="glyphicon glyphicon-minus"></span>
+          </button>
+      </span>
+
+      <input style="width: 70px;" type="text" name="quant[2]" class="form-control input-number"id="quntity" value="1" min="1" max="100">
+      <span class="input-group-btn">
+          <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]" onclick="addNumber(document.getElementById('quntity'))">
+              <span class="glyphicon glyphicon-plus"></span>
+          </button>
+      </span>
+  </div>
+<p></p>
+</div>
+
+</div>
+
+<div class="products2">
+<img src="https://www.siniorafood.com//Portals/0/Aricie.PageFlip/1715/siniora-catalogue-31-38/vignette_prefixe_image-1.jpg"style="width: 150px;height:150px ;">
+<div class="card_div"><p style="color: black; text-align: center;">Siniora dressed 250 g </p></div>
+
+<div class="center1">
+
+  <p>
+    </p><div class="input-group" style="width: 150px;">
+        <span class="input-group-btn" >
+            <button style="margin-left: 25px;" type="button" class="btn btn-danger btn-number "  data-type="minus" data-field="quant[2]" onclick="subNumber(document.getElementById('quntity1'))">
+              <span class="glyphicon glyphicon-minus"></span>
+            </button>
+        </span>
+
+        <input style="width: 70px;" type="text" name="quant[2]" class="form-control input-number"id="quntity1" value="1" min="1" max="100">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]" onclick="addNumber(document.getElementById('quntity1'))">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </span>
+    </div>
+<p></p>
+</div>
+
+</div>
+</div>
+<div style="margin:50px;">
+  <app-conactus></app-conactus>
+  </div>>
+<script src="../../assets/slider.js"></script>

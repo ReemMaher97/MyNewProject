@@ -1,0 +1,23 @@
+<mat-paginator
+    (page)="handlePageEvent($event)"
+    [length]="length"
+    [pageSize]="pageSize"
+    [showFirstLastButtons]="showFirstLastButtons"
+    [pageSizeOptions]= "[2,4 ,5]"
+    [pageIndex]="pageIndex">
+</mat-paginator>
+
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <th>NameOfProducts</th>
+    <th>ProductsPrice</th>
+  </thead>
+<tbody>
+  <tr *ngFor="let item of service.product">
+<td>{{item.ProductName}}</td>
+<td>{{item.Price}}</td>
+</tr>
+</tbody>
+</table>
+

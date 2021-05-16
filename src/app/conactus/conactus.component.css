@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+.nav-content {
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+  /*padding: 28px 0 0 0;*/
+  margin-left: 130px;
+}
+
+nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
+
+  display: block;
+  width: 100px;
+  padding: 4px 0;
+  height: 100px;
+  z-index: 100;
+  color: pink;
+}
+
+nav a {
+  font-family: helvetica;
+  color: pink;
+  padding: 2px 4px;
+  display: block;
+  float: left;
+  text-decoration: none;
+  margin-right: 4px;
+
+  width: 100%;
+
+  font-size: 20px;
+}
+
+nav a:hover,
+nav a.active {
+  background: white;
+  color: gray;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+ul.tabs {
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 10;
+  margin: 0px 0 0;
+  padding: 0;
+  width: 30%;
+  min-width: 175px;
+  list-style: none;
+  -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+ul.tabs li {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  cursor: pointer;
+  padding: 0px 15px;
+  line-height: 41px;
+  text-align: left;
+  font-weight: bold;
+  background: #f4f4f4;
+  border-bottom: 2px solid #eee;
+  text-transform: capitalize;
+  font-weight: normal;
+
+  color: #868686;
+}
+ul.tabs li:before {
+  content: "";
+  float: left;
+  height: 41px;
+  width: 3px;
+  background-color: #337ab7;
+  left: 0;
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+}
+ul.tabs li:hover {
+  background: #f4f4f4;
+  color: #868686;
+}
+ul.tabs li.active {
+  background: #fff;
+  color: #3b50a1;
+  font-family: "Poppins", sans-serif;
+}
+ul.tabs li.active:before {
+  content: "";
+  float: left;
+  height: 41px;
+  font-family: "Poppins", sans-serif;
+  width: 3px;
+  background-color: #5cb85c;
+  left: 0;
+  position: absolute;
+}
+.tab_container {
+  display: inline-block;
+  vertical-align: top;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  z-index: 20;
+  left: -1%;
+  width: 70%;
+  min-width: 10px;
+  text-align: left;
+  background: white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tab_content {
+  padding: 15px;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  display: none;
+}
+
+.tab_drawer_heading {
+  display: none;
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 781px) {
+  ul.tabs {
+    display: none;
+  }
+  ul.tabs {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 10;
+    margin: 0px 0 0;
+    padding: 0;
+    width: 100% !important;
+    min-width: 175px;
+    list-style: none;
+    -ms-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  }
+  .tab_container {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
+    width: 95% !important;
+    border-top: none;
+    border-radius: 0;
+    /*-shadow: 0px 0px 10px black;*/
+  }
+
+  .tab_drawer_heading {
+    font-family: "Poppins", sans-serif;
+    /*background: #e3e3e3;*/
+    /* Old browsers */
+
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#600026', endColorstr='#c60943',GradientType=0 );
+    /* IE6-9 */
+    color: #868686;
+    margin: 0;
+    padding: 15px 20px;
+    display: block;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+    position: relative;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .d_active {
+    font-family: "Poppins", sans-serif;
+    background: #fff !important;
+    /*background: -moz-linear-gradient(top, #4c001e 0%, #9f0735 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4c001e), color-stop(100%, #9f0735));
+    background: -webkit-linear-gradient(top, #4c001e 0%, #9f0735 100%);
+    background: -o-linear-gradient(top, #4c001e 0%, #9f0735 100%);
+    background: -ms-linear-gradient(top, #4c001e 0%, #9f0735 100%);
+    background: linear-gradient(to bottom, #4c001e 0%, #9f0735 100%);*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c001e', endColorstr='#9f0735',GradientType=0 );
+    color: #3b50a1;
+  }
+  .d_active.tab_drawer_heading:before {
+    content: "";
+    float: none;
+    height: 2px;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    background-color: #3b50a1;
+  }
+}
+.tab_content li {
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  line-height: 30px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+li.email {
+  font-family: "Poppins", sans-serif;
+
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+li.address {
+  font-family: "Poppins", sans-serif;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+li.phone {
+  font-family: "Poppins", sans-serif;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+#whatsapp {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  position: fixed;
+  left: 5px;
+  bottom: 15px;
+  z-index: 1055;
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.85;
+}
+
+ul.download-pdf {
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
+.download-pdf li {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  border: 1px solid #eee;
+  display: table;
+  margin-bottom: 5px;
+  line-height: 43px;
+  width: 49%;
+  float: left;
+  margin-right: 1%;
+}
+.download-pdf li:before {
+  font-family: "Poppins", sans-serif;
+  content: "";
+  left: 0;
+  width: 3px;
+  position: absolute;
+}
+.download-pdf li img {
+  font-family: "Poppins", sans-serif;
+  float: left;
+  margin-right: 10px;
+}
+.download-pdf li a {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  width: 100%;
+  color: #000;
+  text-align: left;
+}
+
+.stock-text {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}

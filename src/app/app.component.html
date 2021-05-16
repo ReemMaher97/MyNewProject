@@ -1,0 +1,157 @@
+<div class="header">
+
+  <div class="v2" style="width: 40%;">
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search Product" aria-label="Recipient's username"
+        aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" style=" background: black;"> <span
+            class="glyphicon glyphicon-search "></span> </button>
+      </div>
+    </div>
+  </div>
+  <div class="option">
+    <label><span class="glyphicon glyphicon-globe"></span></label>
+    <select name="Languge">
+      <option value="English">English</option>
+      <option value="Arabic">Arabic</option>
+    </select>
+    <label class="v1"></label>
+    <label><span class="glyphicon glyphicon-map-marker"></span></label>
+    <select name="Country">
+      <option value="Jordan" class="flag flag-jo">Jordan</option>
+      <option value="KSA">KSA</option>
+      <option value="UAE">UAE</option>
+      <option value="Palestine">Palestine</option>
+    </select>
+
+
+    <label class="v1"></label>
+    <div>
+      <a href="#"><span class="fa fa-facebook"
+          style="font-size:15px;color:white;margin-right: 15px; position: relative;left: 850px;bottom: 25px;"></span></a>
+
+      <a href="#"><span class="fa fa-youtube"
+          style="font-size:15px;color:white ;margin-right: 15px; position: relative;left: 860px; bottom: 25px;"></span></a>
+      <a href="#"><span class="fa fa-instagram"
+          style="font-size:15px;color:white;position: relative;left: 870px;bottom: 25px;"></span></a>
+    </div>
+
+  </div>
+</div>
+<div class="navigation middle-horizontal-align middle-vertical-align">
+  <div class="b1">
+    <ul>
+      <li><a routerLink=""><img
+            src="https://www.raya.ps/cached_uploads/crop2/972/558/2020/08/04/9998959130-1596525062.jpg"
+            style="width: 200px;height: 80px; margin-top: 14px;"></a></li>
+      <li><a routerLink="">PRODUCTS</a></li>
+      <li><a routerLink="">OFFERS</a></li>
+    </ul>
+  </div>
+
+  <div class="b2" >
+
+    <ul>
+      <!--login-->
+
+      <li  *ngIf="global.isAuth; else notAuth">
+        <a routerLink="signin"><span class="glyphicon glyphicon-user" style="font-size:20px;color:red"></span>
+        Logout</a>
+      </li>
+      <ng-template #notAuth>
+        <li> <a routerLink="signin"><span class="glyphicon glyphicon-user" style="font-size:20px;color:red"></span>
+          Login</a> </li>
+      </ng-template>
+
+
+      <!--Favorate-->
+
+      <li  *ngIf="global.isAuth; else notAuth2">
+        <a  routerLink="Favorites"  ><span class='far fa-heart' style='font-size:20px;color:red'></span> Favorites</a>
+        </li>
+        <ng-template #notAuth2>
+      <li><a  routerLink="signin"  ><span class='far fa-heart' style='font-size:20px;color:red'></span> Favorites</a></li>
+        </ng-template>
+     <!--Cart-->
+
+      <li *ngIf="global.isAuth; else notAuth3">
+        <a  routerLink="cart" ><span class='fas fa-shopping-cart' style='font-size:20px ;color:red'></span> Cart</a>
+      </li>
+      <ng-template #notAuth3>
+        <li><a  routerLink="signin" ><span class='fas fa-shopping-cart' style='font-size:20px ;color:red'></span> Cart</a></li>
+      </ng-template>
+
+    </ul>
+
+  </div>
+</div>
+
+<div class="body_content">
+  <router-outlet></router-outlet>
+</div>
+
+<hr>
+<div class="footer">
+
+
+  <div class="container">
+    <div class=" row">
+      <div class="col">
+        <h5>Jordan</h5>
+        <ul>
+          <li>Siniora Food Industries Company</li>
+          <li>Tel: +962 6 402 3772</li>
+          <li>Fax: +962 6 402 5986</li>
+          <li>E-mail: info@siniorafood.com</li>
+          <li>P.O. Box P.O.Box. 191 King Abdullah II Bin Al-Hussein Industrial Estate 11512 Sahab –</li>
+          <li>Jordan</li>
+        </ul>
+
+      </div>
+      <div class="col">
+        <h5>Palestine</h5>
+        <ul>
+          <li>Siniora Food Industries Company</li>
+          <li>Tel: +970 2 279 6804</li>
+          <li>Fax: +970 2 279 9088</li>
+          <li>E-mail: info@siniorafood.com</li>
+          <li>P.O. Box 132 Jerusalem – Palestine</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h5>Saudi Arabia</h5>
+        <ul>
+          <li>Saudi Siniora Trading Company L.L.C</li>
+          <li>Tel: +966 1 244 8424</li>
+          <li>Fax: +966 1 244 2181</li>
+          <li>E-mail: infoksa@siniorafood.com</li>
+          <li>P.O.Box.: 2256 Riyadh 11451 Saudi Arabia - Riyadh</li>
+
+        </ul>
+      </div>
+      <div class="col">
+        <h5>UAE-Dubai</h5>
+        <ul>
+          <li>Diamond Meat Processing L.L.C</li>
+          <li>Tel: +971 4 42860382</li>
+          <li>E-mail: info@siniorafood.com</li>
+          <li>20754 Dubai – United Arab Emirates</li>
+
+        </ul>
+
+      </div>
+    </div>
+    <div class="t1">
+      <p>Join Our Newsletter</p>
+      <input name="e-mail" type="text" placeholder="Enter Your e-mail">
+      <input value="Subscribe" type="submit">
+      <p>Follow us</p>
+    </div>
+  </div>
+
+</div>
+
+
+<script src=" ../assets/counter.js"></script>

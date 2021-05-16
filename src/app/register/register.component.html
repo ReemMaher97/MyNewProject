@@ -1,0 +1,23 @@
+<div class="main">
+
+<form name="register" (submit)="submit()">
+  <fieldset>
+
+    <div class="legend">
+      Register
+      </div>
+      <input name="id" type="hidden"  [(ngModel)]="service.user.id">
+    <span>UserName(Email/Mobile)</span>
+    <input name="username" [(ngModel)]="service.user.userName" type="text" placeholder="">
+    <span>Password</span>
+    <input name="Password" [(ngModel)]="service.user.password" type="password" placeholder="">
+    <input value="register" type="submit" placeholder="" class="btn btn-danger btn-block"><br>
+    <span class="rem">Remind me </span><input type="checkbox" ><br>
+    <div style="text-align-last: center;margin-bottom: 20px;">
+      Do not have an account?
+    </div>
+
+    <input value="Login" type="button"   onClick="window.open('signin')" placeholder="" class="btn btn-outline-danger btn-block" style="border:1px solid #d43f3a;">
+    </fieldset>
+</form>
+</div>
